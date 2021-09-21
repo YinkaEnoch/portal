@@ -1,0 +1,73 @@
+<section class="img-container">
+  <img src="assets/bowen_logo.png" alt="School Logo" />
+</section>
+
+<section class="container">
+  <section class="form-container">
+    <h2>Create a New Account</h2>
+    <form action="/" method="POST" [formGroup]="registerForm">
+      <label for="first-name">
+        First Name <span class="red-text">*</span>
+      </label>
+      <input
+        id="first-name"
+        type="text"
+        name="first-name"
+        formControlName="firstName"
+        required
+      />
+
+      <label for="middle-name">Middle Name</label>
+      <input
+        id="middle-name"
+        type="text"
+        name="middle-name"
+        formControlName="middleName"
+      />
+
+      <label for="last-name">Last Name <span class="red-text">*</span></label>
+      <input
+        id="last-name"
+        type="text"
+        name="last-name"
+        required
+        formControlName="lastName"
+      />
+
+      <label for="email">Email <span class="red-text">*</span></label>
+      <input
+        id="email"
+        type="email"
+        name="email"
+        formControlName="email"
+        required
+      />
+
+      <label for="password">Password <span class="red-text">*</span></label>
+      <input
+        id="password"
+        [type]="showPassword ? 'text' : 'password'"
+        name="password"
+        formControlName="password"
+        required
+      />
+
+      <label for="show-password" class="show-password">
+        <input
+          id="show-password"
+          type="checkbox"
+          name="show-password"
+          (click)="setShowPassword()"
+        />
+        <span>Show Password</span>
+      </label>
+
+      <button type="submit" [disabled]="!registerForm.valid">
+        Create Account
+      </button>
+    </form>
+  </section>
+  <p class="login">
+    Already have an account? <a href="#" routerLink="/login">Log In</a>
+  </p>
+</section>

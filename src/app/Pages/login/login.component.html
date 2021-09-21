@@ -1,0 +1,44 @@
+<section class="img-container">
+  <img src="assets/bowen_logo.png" alt="School Logo" />
+</section>
+
+<section class="container">
+  <section class="form-container">
+    <h2>Log In</h2>
+    <form action="/" method="POST" [formGroup]="loginForm">
+      <label for="email">Email</label>
+      <input
+        id="email"
+        type="email"
+        name="email"
+        formControlName="email"
+        required
+      />
+
+      <label for="password">Password</label>
+      <input
+        id="password"
+        [type]="showPassword ? 'text' : 'password'"
+        name="password"
+        formControlName="password"
+        required
+      />
+
+      <label for="show-password" class="show-password">
+        <input
+          id="show-password"
+          type="checkbox"
+          name="show-password"
+          (click)="setShowPassword()"
+        />
+        <span>Show Password</span>
+      </label>
+
+      <button type="submit" [disabled]="!loginForm.valid">Login</button>
+    </form>
+  </section>
+  <p class="forgot-password">Forgot password?</p>
+  <p class="signup">
+    New here? <a href="#" routerLink="/register">Create a new Account</a>
+  </p>
+</section>
