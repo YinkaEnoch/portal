@@ -7,7 +7,10 @@ import { LoginComponent } from './Pages/login/login.component';
 import {RegisterComponent} from './Pages/register/register.component';
 import {DashboardComponent} from './Pages/dashboard/dashboard.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { SidebarComponent } from './Components/sidebar/sidebar.component';
+import { HomeComponent } from './Pages/dashboard/home/home.component';
+import { ProfileComponent } from './Pages/dashboard/profile/profile.component';
+import { ApplicationComponent } from './Pages/dashboard/application/application.component';
+import { DashboardHeaderComponent } from './Components/dashboard-header/dashboard-header.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { SidebarComponent } from './Components/sidebar/sidebar.component';
     LoginComponent,
     RegisterComponent,
     DashboardComponent,
-    SidebarComponent
+    HomeComponent,
+    ProfileComponent,
+    ApplicationComponent,
+    DashboardHeaderComponent
   ],
   imports: [
     BrowserModule,

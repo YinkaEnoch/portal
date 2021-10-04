@@ -1,0 +1,140 @@
+@import "../../../styles/_placeholder";
+@import "../../../styles/_variables";
+
+.container {
+  padding: 2rem;
+  margin-top: 2rem;
+  background-color: #dedede;
+  // #e9ecef
+}
+
+.breadcrumb {
+  background-color: #e9ecef;
+  padding: 0.5rem;
+  padding-left: 0.8rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+.notice {
+  margin: 1rem auto 2rem;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  padding: 1rem;
+  text-align: center;
+}
+
+.dashboard-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.dashboard {
+  flex-grow: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  padding: 0 1rem;
+}
+
+.dashboard-item {
+  padding: 1rem 2rem;
+  margin: 0 2rem 2rem;
+  text-align: center;
+  color: $white;
+  border-radius: 5px;
+  flex-basis: 30%;
+  flex-grow: 1;
+  box-shadow: 2px 2px 4px #999;
+
+  img {
+    width: 2rem;
+    display: block;
+  }
+
+  h4 {
+    margin-bottom: 1rem;
+    color: #111;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    padding: 0.5rem 1rem;
+    border: 1px solid $white;
+    border-radius: 4px;
+    display: inline-block;
+    transition: all 0.2s linear;
+
+    &:hover {
+      box-shadow: 0 0 3px $white;
+      background-color: $white;
+      color: #111;
+    }
+  }
+}
+
+.img-bg {
+  margin: auto;
+  margin-bottom: 2rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.red-bg {
+  background-color: $danger;
+}
+.blue-bg {
+  background-color: $primary;
+}
+.yellow-bg {
+  background-color: $warning;
+}
+.green-bg {
+  background-color: $success;
+}
+
+.sidebar {
+  flex-basis: 40%;
+  background-color: #eee;
+
+  h4 {
+    background-color: #ddd;
+    border: 1px solid #ccc;
+    border-radius: 4px 4px 0 0;
+    padding: 0.5rem 1rem;
+    text-align: center;
+  }
+
+  div {
+    padding: 1rem;
+  }
+
+  .sidebar-header {
+    background-color: $primary;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    color: $white;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+
+    &:nth-child(even) {
+      margin-top: 1rem;
+    }
+  }
+}
+
+.dflex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.small-letter {
+  font-size: 0.85rem;
+}

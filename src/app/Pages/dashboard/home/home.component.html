@@ -1,0 +1,79 @@
+<app-dashboard-header></app-dashboard-header>
+<section class="container">
+  <div class="breadcrumb small-letter">
+    <span class="inactive">Dashboard</span>
+  </div>
+
+  <h3 class="notice">
+    Please send your transcript to pgcollege@bowen.edu.ng after completion of
+    the form
+  </h3>
+
+  <section class="dashboard-container">
+    <section class="dashboard">
+      <div class="dashboard-item blue-bg">
+        <p class="img-bg">
+          <img src="assets/icons/folder-open.svg" alt="application_icon" />
+        </p>
+        <h4>Application(s)</h4>
+
+        <a href="/dashboard/application" routerLink="/dashboard/application">
+          Apply Now
+        </a>
+      </div>
+
+      <div class="dashboard-item yellow-bg">
+        <p class="img-bg">
+          <img src="assets/icons/download.svg" alt="acknowledgement_icon" />
+        </p>
+        <h4>Acknowledgement Card</h4>
+        <a href="/dashboard" routerLink="/dashboard">
+          Print Card
+        </a>
+      </div>
+      <div class="dashboard-item green-bg">
+        <p class="img-bg">
+          <img src="assets/icons/credit-card.svg" alt="payment_icon" />
+        </p>
+        <h4>Payment History</h4>
+        <a href="/dashboard" routerLink="/dashboard">
+          View Payments
+        </a>
+      </div>
+      <div class="dashboard-item red-bg">
+        <p class="img-bg">
+          <img src="assets/icons/bell.svg" alt="status_icon" />
+        </p>
+        <h4>Application Status</h4>
+        <a
+          href="/dashboard/application"
+          routerLink="/dashboard/application"
+          fragment="status"
+        >
+          View Status
+        </a>
+      </div>
+    </section>
+
+    <aside class="sidebar small-letter">
+      <h4>Current Admission and Application</h4>
+
+      <div>
+        <p class="sidebar-header">
+          <strong>Current Admission</strong>
+        </p>
+        <p class="dflex">
+          <strong>Starts</strong>
+          <span>2021-09-13</span>
+        </p>
+        <p class="dflex">
+          <strong>Ends</strong>
+          <span>2022-07-31</span>
+        </p>
+
+        <p class="sidebar-header"><strong>Current Application</strong></p>
+        <p><strong>No Application Currently</strong></p>
+      </div>
+    </aside>
+  </section>
+</section>
