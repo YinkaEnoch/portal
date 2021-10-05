@@ -12,6 +12,7 @@ header {
   align-items: center;
   font-size: 0.85rem;
   box-shadow: 0 0 5px $gray;
+  user-select: none;
 
   .brand-icon {
     margin-right: auto;
@@ -32,10 +33,6 @@ nav ul {
   z-index: 2;
   transition: all 0.2s linear;
 
-  @media screen and (min-width: $md) {
-    display: block;
-  }
-
   &::before {
     content: "";
     position: fixed;
@@ -46,6 +43,20 @@ nav ul {
     background: black;
     opacity: 0.7;
     transition: all 0.2s linear;
+  }
+
+  @media screen and (min-width: $md) {
+    display: block;
+    position: static;
+    width: auto;
+    height: auto;
+    background: none;
+    box-shadow: none;
+    z-index: 1;
+
+    &::before {
+      display: none;
+    }
   }
 }
 
@@ -95,6 +106,13 @@ nav ul {
         text-align: right;
         border: none;
         cursor: pointer;
+      }
+
+      @media screen and (min-width: $md) {
+        display: inline-block;
+        background: none;
+        margin: 0;
+        border-bottom: none;
       }
     }
   }
