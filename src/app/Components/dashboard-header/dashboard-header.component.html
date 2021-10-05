@@ -3,8 +3,10 @@
     <img src="assets/bowen_logo.png" alt="bowen_logo" />
   </div>
 
-  <nav>
+  <nav [class.show-nav]="showNav" (click)="toggleShowNav()">
+    <p id="nav-open">&#9776;</p>
     <ul>
+      <li id="nav-close" class="nav-item">&times;</li>
       <li class="nav-item">
         <a class="nav-link" href="#" routerLink="/dashboard">Dashboard</a>
       </li>
@@ -14,15 +16,13 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" routerLink="/dashboard/payment">
-          Payments
-        </a>
+        <a class="nav-link" href="#" routerLink="/dashboard"> Payments </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#" routerLink="/dashboard/profile">Profile</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" routerLink="/dashboard">Signout</a>
+        <a class="nav-link" href="#" routerLink="/logout">Signout</a>
       </li>
     </ul>
   </nav>

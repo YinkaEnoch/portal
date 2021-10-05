@@ -1,3 +1,5 @@
+@import '../../styles/variables';
+
 .img-container {
   margin: 5rem auto 0;
   img {
@@ -9,8 +11,16 @@
 }
 
 .container {
-  width: 40%;
+  width: 90%;
   margin: 2rem auto 5rem;
+
+  @media screen and (min-width: $sm){
+    width: 60%;
+  }
+
+  @media screen and (min-width: $md){
+    width: 30%;
+  }
 }
 
 .red-text {
@@ -23,11 +33,13 @@
     2px 2px 4px rgba(200, 200, 200, 0.7);
   border-radius: 4px;
   padding: 1rem;
+  background: #fcfcfc;
 
   h2 {
     font-size: 1.3rem;
     margin-bottom: 3rem;
     text-align: center;
+    color: $blue;
   }
 
   input:not([type="checkbox"]) {
@@ -44,14 +56,17 @@
     padding: 0.5rem 1rem;
     margin: 2rem auto 1rem;
     background: none;
-    border: 1px solid grey;
+    border: 1px solid $blue;
+    color: $blue;
     border-radius: 4px;
     transition: all 0.2s linear;
     cursor: pointer;
 
     &:hover {
-      box-shadow: 0 0 6px #555;
+      box-shadow: 0 0 6px $blue;
       transform: translateY(-3px);
+      color: $white;
+      background-color: $blue;
     }
   }
 }

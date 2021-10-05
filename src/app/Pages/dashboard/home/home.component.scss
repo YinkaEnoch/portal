@@ -2,10 +2,15 @@
 @import "../../../styles/_variables";
 
 .container {
-  padding: 2rem;
+  padding: 1rem;
+  padding-top: 2rem;
   margin-top: 2rem;
   background-color: #dedede;
   // #e9ecef
+
+  @media screen and (min-width: $sm) {
+    padding: 2rem;
+  }
 }
 
 .breadcrumb {
@@ -28,6 +33,11 @@
 .dashboard-container {
   display: flex;
   align-items: flex-start;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: $md){
+    flex-wrap: nowrap;
+  }
 }
 
 .dashboard {
@@ -40,13 +50,19 @@
 
 .dashboard-item {
   padding: 1rem 2rem;
-  margin: 0 2rem 2rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
   text-align: center;
   color: $white;
   border-radius: 5px;
-  flex-basis: 30%;
-  flex-grow: 1;
+  flex-basis: 70%;
+  flex-grow: 2;
   box-shadow: 2px 2px 4px #999;
+
+  @media screen and (min-width: $sm){
+    margin: 0 2rem 2rem;
+    flex-basis: 40%;
+  }
 
   img {
     width: 2rem;
@@ -102,7 +118,11 @@
 
 .sidebar {
   flex-basis: 40%;
+  flex-grow: 2;
   background-color: #eee;
+
+  @media screen and (min-width: $md) {
+  }
 
   h4 {
     background-color: #ddd;
