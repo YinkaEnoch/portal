@@ -13,6 +13,7 @@ header {
   font-size: 0.85rem;
   box-shadow: 0 0 5px $gray;
   user-select: none;
+  z-index: 2;
 
   .brand-icon {
     margin-right: auto;
