@@ -2,23 +2,7 @@
 @import "../../../styles/_variables";
 
 .container {
-  padding: 1rem;
-  padding-top: 2rem;
-  margin-top: 2rem;
-  background-color: #dedede;
-  // #e9ecef
-
-  @media screen and (min-width: $sm) {
-    padding: 2rem;
-  }
-}
-
-.breadcrumb {
-  background-color: #e9ecef;
-  padding: 0.5rem;
-  padding-left: 0.8rem;
-  border-radius: 4px;
-  font-size: 0.85rem;
+  @extend %container;
 }
 
 .notice {
@@ -155,9 +139,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-.small-letter {
-  font-size: 0.85rem;
 }
 
 .not-allowed {
